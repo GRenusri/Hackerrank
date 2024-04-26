@@ -1,0 +1,44 @@
+Conditional statements:
+1st method: (1 hidden test failure in Hackerrank but works on eclipse)
+    public class Solution {
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        System.out.println(n%2!=0 ? "Weird" :(n>=2 && n<=5)? "Not weird":(n>=6 && n<=20)?"Weird": "Not Weird");      
+    }
+    }
+
+2nd method:
+    public class Solution {
+    private static final Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+          if (N % 2 != 0 || (N >= 6 && N <= 20)) {
+        System.out.println("Weird");
+    } else {
+        System.out.println("Not Weird");
+    }
+
+3rd method: 
+        public class Solution {
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        if(n%2!=0){
+            System.out.println("Weird");
+        }else{
+            if(n>=2 && n<=5){
+                System.out.println("Not Weird");
+            }else if(n>=6 && n<=20){
+                System.out.println("Weird");
+            }else if(n>20){
+                System.out.println("Not Weird");
+            }
+        }
+    }
+    }
+
+
