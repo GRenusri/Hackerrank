@@ -1,0 +1,14 @@
+If String input command is to be written after numeric commands i.e., either int or double comands 
+
+2nd method:  use----> scan.nextLine();
+Reason: scan.nextInt() and scan.nextDouble() read only the numeric part of the input until they encounter a whitespace/character (like space, newline, tab).
+The newline character (\n) entered after the double value remains in the input stream (console buffer).
+When scan.nextLine() is called in the second code, it immediately reads this leftover newline character as an empty string ("").
+
+CODE:
+ Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        double d=scan.nextDouble();
+        scan.nextLine();
+        String s = scan.nextLine();
+      
